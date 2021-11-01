@@ -2,4 +2,11 @@
 
 Olá! Este é o meu repositório de projetos da imersão Dev do ano de 2021
 
-- Certificard
+- Certificard;
+- NandaFlix;
+- Tabela de Classificação;
+- Super Trunfo;
+- Conversor de Moedas;
+- Calculadora;
+- Joguinho.
+
