@@ -1,0 +1,164 @@
+<html>
+
+<head>
+    <title>
+        Imersão Dev - Aula 05
+    </title>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="page-title">
+            Nandaflix
+        </h1>
+        <img src="https://www.alura.com.br/assets/img/imersoes/dev-2021/logo-imersao-aluraflix.svg" class="page-logo"
+            alt="">
+        <p class="page-subtitle">
+            O que gostaria de assistir agora?
+        </p>
+        <div class="form-wrapper">
+            <input type="text" id="filme" name="filme" placeholder="Insira o nome do filme">
+            <button onClick="adicionarFilme()">Pesquisar</button>
+    
+        </div>
+    </div>
+    <div id="listaFilmes"></div>
+    <a href="https://alura.com.br/" target="_blank">
+        <img src="https://www.alura.com.br/assets/img/home/alura-logo.svg" alt="" class="alura-logo">
+    </a>
+</body>
+
+</html>
+
+<div class="row">
+  <div class="coluna">
+     <center>
+    <a href='https://www.youtube.com/embed/Ht6aINEUb1Y'>
+    <img src="https://m.media-amazon.com/images/M/MV5BNjk2ODQzNDYxNV5BMl5BanBnXkFtZTgwMTcyNDg4NjE@._V1_UX182_CR0,0,182,268_AL_.jpg" alt="descrição da imagem" style="width:85%">
+        <p>UMA LINDA MULHER</p>
+  </div>
+      
+  <div class="coluna">
+    <a href='https://www.youtube.com/embed/6SKf944GNig'>
+    <img src="https://m.media-amazon.com/images/M/MV5BMDJhMGRjN2QtNDUxYy00NGM3LThjNGQtMmZiZTRhNjM4YzUxL2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_UX182_CR0,0,182,268_AL_.jpg" alt="descrição da imagem" style="width:85%">
+       <p>SHREK 2</p>
+  </div>
+    
+  <div class="coluna">
+    <a href='https://www.youtube.com/embed/mbbPSq63yuM'>
+    <img src="https://m.media-amazon.com/images/M/MV5BZjdkOTU3MDktN2IxOS00OGEyLWFmMjktY2FiMmZkNWIyODZiXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_UX182_CR0,0,182,268_AL_.jpg" alt="descrição da imagem" style="width:85%">
+       <p>INTERESTELAR</p>
+      
+  </div>
+    </div>
+
+<style>
+.coluna{
+  float: left;
+  width: 33.33%;
+:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+</style>
+    
+
+<css>
+
+body {
+    font-family: 'Roboto Mono',monospace;
+    text-align:center;
+    background-image: url('https://caldobom.com.br/uploads/2019/04/como-fazer-pipoca-de-cinema.jpg.webp');
+    background-color: #000000;
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+  }
+  
+  .container {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .page-title {
+    color: #ffffff;
+    margin: 0 0 5px;
+  }
+  
+  .page-subtitle {
+    color: #ffffff;
+    margin-top: 5px;
+  }
+  
+  .page-logo {
+    width: 200px;
+  }
+  
+  .alura-logo {
+    width: 40px;
+    position: absolute;
+    top: 10px;
+    right:10px;
+  }
+  
+  #listaFilmes img {
+    margin: 10px;
+    background-position: absolute
+    text-align: center
+  }
+  
+  .form-wrapper {
+    margin: 0 0 15px;
+  }
+  
+  .form-wrapper input {
+    display: block;
+    margin: 0 auto;
+    padding: 10px 15px;
+  }
+  
+  .form-wrapper button {
+    border: 0;
+    color: #ffffff;
+    background: #DA1E26;
+    font-weight:bold;
+    padding: 15px 20px;
+    font-size: 16px;
+    borde-radius: 4px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: .3s;
+  }
+  
+  .form-wrapper button:hover {
+    opacity:.8;
+  }
+
+<javascript>
+
+function adicionarFilme() {
+  var campoFilmeFavorito = document.querySelector('#filme')
+  console.log(campoFilmeFavorito)
+  var filmeFavorito = campoFilmeFavorito.value
+  listarFilmesNaTela(filmeFavorito)
+  alert ("Este filme não está disponível")
+  campoFilmeFavorito.value = ""
+}
+ 
+
+
+function listarFilmesNaTela(filme) {
+  var listaFilmes = document.querySelector('#listaFilmes')
+  var elementoFilme = "<img src=" + filme + ">"
+  listaFilmes.innerHTML = listaFilmes.innerHTML + elementoFilme
+}
+
+var listaNomesFilmes
+
+prompt //pra ixibir só os nomes dos filmes que a pessoa quer, 
+
+for (i = 0; i < listaFilmes.length; i++){
+  document.write("<img src=" + listaFilmes[i] + ">")
+}
+
